@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="10.173" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="login functionality" name="Login attempt without credentials" time="3.585">
+<system-out><![CDATA[
+Given I am on the login page................................................passed
+When I click the login button...............................................passed
+Then I should see the error message "Epic sadface: Username is required"....passed
+]]></system-out>
+</testcase>
+<testcase classname="login functionality" name="Login attempt with valid username and wrong password" time="3.281">
+<system-out><![CDATA[
+Given I am on the login page................................................passed
+Given I enter username "standard_user"......................................passed
+And I enter password "wrong_password".......................................passed
+When I click the login button...............................................passed
+Then I should see the error message "Epic sadface: Username and password do not match any user in this service".passed
+]]></system-out>
+</testcase>
+<testcase classname="login functionality" name="Login attempt with invalid username and valid password" time="3.098">
+<system-out><![CDATA[
+Given I am on the login page................................................passed
+Given I enter username "invalid_user".......................................passed
+And I enter password "secret_sauce".........................................passed
+When I click the login button...............................................passed
+Then I should see the error message "Epic sadface: Username and password do not match any user in this service".passed
+]]></system-out>
+</testcase>
+</testsuite>

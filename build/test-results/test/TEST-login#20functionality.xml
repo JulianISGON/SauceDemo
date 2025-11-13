@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="login functionality" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-10-30T02:08:37" hostname="JULIµNISAZA" time="4.96">
+  <properties/>
+  <testcase name="Login attempt without credentials" classname="login functionality" time="4.96"/>
+  <system-out><![CDATA[
+@login
+Scenario: Login attempt without credentials                                # src/test/resources/features/login.feature:7
+  Given I am on the login page                                             # com.saucedemo.stepdefinitions.LoginStepDefinitions.i_am_on_the_login_page()
+  When I click the login button                                            # com.saucedemo.stepdefinitions.LoginStepDefinitions.i_click_the_login_button()
+  Then I should see the error message "Epic sadface: Username is required" # com.saucedemo.stepdefinitions.LoginStepDefinitions.i_should_see_the_error_message_epic_sadface_username_is_required()
+]]></system-out>
+  <system-err><![CDATA[oct. 29, 2025 9:08:40 P. M. org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find CDP implementation matching 142
+oct. 29, 2025 9:08:40 P. M. org.openqa.selenium.chromium.ChromiumDriver lambda$new$5
+WARNING: Unable to find version of CDP to use for 142.0.7444.59. You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.16.1` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+]]></system-err>
+</testsuite>
